@@ -1,0 +1,23 @@
+{
+  "name": "carandbike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass --watch sass/main.sass styles/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShilpiJain/html-landing-page.git"
+  },
+  "author": "shilpi jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShilpiJain/html-landing-page/issues"
+  },
+  "homepage": "https://github.com/ShilpiJain/html-landing-page#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

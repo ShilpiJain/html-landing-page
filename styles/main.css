@@ -1,0 +1,14 @@
+.cnb-header {
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 4px #0000001F; }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+.cnb-container {
+  max-width: 1200px;
+  min-width: 920px;
+  padding: 0 30px;
+  margin: auto;
+  width: 100%; }
