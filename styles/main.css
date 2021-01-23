@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -24,6 +25,9 @@ body {
 
 .alignitem-base {
   align-items: baseline; }
+
+.cnb-d__block {
+  display: block; }
 
 .cnb-header {
   box-shadow: 0px 3px 4px #0000001F;
@@ -81,7 +85,7 @@ body {
     font-size: 18px;
     line-height: 24px; }
     .footer-details__number--link {
-      font-weight: 600;
+      font-weight: 500;
       text-decoration: none;
       color: #001E4A; }
   .footer-details__text {
@@ -111,8 +115,10 @@ body {
       width: 100%; }
 
 .product-launch__heading {
-  font: normal normal bold 22px/29px Roboto;
-  color: #001E4A; }
+  font-family: 'Roboto';
+  color: #001E4A;
+  font-size: 22px;
+  line-height: 29px; }
 
 .product-tab {
   margin-top: 26px;
@@ -126,7 +132,8 @@ body {
     color: #5C6065;
     text-decoration: none;
     font-size: 14px;
-    line-height: 19px; }
+    line-height: 19px;
+    font-weight: 500; }
 
 .feature-wrapper {
   border: 1px solid #0000001A;
@@ -134,7 +141,7 @@ body {
 
 .feature-display {
   display: grid;
-  grid-template-columns: 1.3fr 1.7fr 1.15fr;
+  grid-template-columns: 1.3fr 1.7fr 1.3fr;
   grid-column-gap: 30px; }
   .feature-display__view {
     margin-top: 30px;
@@ -150,7 +157,8 @@ body {
     color: #001E4A;
     margin-bottom: 14px;
     font-size: 20px;
-    line-height: 26px; }
+    line-height: 26px;
+    font-weight: 500; }
   .product-desciption__text {
     color: #5C6065;
     margin-bottom: 24px;
@@ -162,7 +170,8 @@ body {
   color: #001E4A;
   margin-bottom: 17px;
   font-size: 16px;
-  line-height: 21px; }
+  line-height: 21px;
+  font-weight: 500; }
 
 .product-keypoints__item {
   padding-left: 28px;
@@ -188,7 +197,8 @@ body {
   .product-specification__label {
     color: #001E4A;
     font-size: 16px;
-    line-height: 21px; }
+    line-height: 21px;
+    font-weight: 500; }
 
 .specification-tab {
   margin-top: 20px;
@@ -198,7 +208,9 @@ body {
     color: #5C6065BD;
     margin-right: 30px;
     font-size: 12px;
-    line-height: 16px; }
+    line-height: 16px;
+    font-weight: 500;
+    cursor: pointer; }
     .specification-tab__item--last {
       margin-right: 0; }
 
@@ -220,13 +232,14 @@ body {
     color: #001E4A;
     font-size: 22px;
     line-height: 19px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    font-weight: bold; }
 
 .vidoe-clips-grid {
   display: grid;
   grid-column-gap: 74px;
   grid-template-columns: 1fr 1fr;
-  grid-template-row: 1fr 1fr; }
+  grid-template-rows: 1fr 1fr; }
 
 .video-wrapper {
   margin-bottom: 43px; }
@@ -244,3 +257,7 @@ body {
     color: #00060E;
     font-size: 14px;
     line-height: 21px; }
+
+.box-container {
+  padding: 30px;
+  min-height: 393px; }

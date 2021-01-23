@@ -62,10 +62,10 @@
             <div class="product-launch">                
                 <h1 class="product-launch__heading">MG Motor Upcoming launches</h1>
                 <div class="product-tab">
-                    <div class="product-tab__item">
-                        <a href="#" class="product-tab--link" alt="MG 3" title="MG 3">MG 3</a>
+                    <div class="product-tab__item" id="default-open" onclick="openTab(event, 'mgModal', 'cnb-tab-wrapper', 'product-tab__item')">
+                        <a href="#" class="product-tab--link"   alt="MG 3" title="MG 3">MG 3</a>
                     </div>
-                    <div class="product-tab__item">
+                    <div class="product-tab__item" onclick="openTab(event, 'gloster', 'cnb-tab-wrapper', 'product-tab__item')">
                         <a href="#" class="product-tab--link" alt="Gloster" title="Gloster">Gloster</a>
                     </div>
                     <div class="product-tab__item">
@@ -84,46 +84,57 @@
             </div>
         </header>
         <section class="feature-wrapper">
-            <div class="feature-display">
-                <div class="feature-display__view">
-                    <img src="images/display-car.png" alt="MG 3 new car launch by MG Motor"/>
-                </div>
-                <div class="product-desciption">
-                    <div class="product-desciption__title">MG 3</div>
-                    <div class="product-desciption__text">
-                        The MG 3 is a subcompact car produced by SAIC. The first generation, marketed as the MG 3 SW, is based on the British made Rover Streetwise, which itself was based on the Rover 25, while the second generation, introduced in 2011 is marketed simply as the MG 3.
+            <div id="mgModal" class="cnb-tab-wrapper">
+                <div class="feature-display">
+                    <div class="feature-display__view">
+                        <img src="images/display-car.png" alt="MG 3 new car launch by MG Motor"/>
                     </div>
-                    <div class="product-keyfeature">
-                        <div class="product-keyfeature__label">Key Features</div>
-                        <div class="product-keypoints">
-                            <div class="product-keypoints__item product-keypoints__item--before">High on fuel efficiency and performance</div>
-                            <div class="product-keypoints__item product-keypoints__item--before">Reaches 100 km/hr in 10.4 seconds</div>
-                            <div class="product-keypoints__item product-keypoints__item--before">Four cylinder layout, it comes mated to a 5 speed manual gearbox</div>
+                    <div class="product-desciption">
+                        <div class="product-desciption__title">MG 3</div>
+                        <div class="product-desciption__text">
+                            The MG 3 is a subcompact car produced by SAIC. The first generation, marketed as the MG 3 SW, is based on the British made Rover Streetwise, which itself was based on the Rover 25, while the second generation, introduced in 2011 is marketed simply as the MG 3.
                         </div>
-                    </div> 
-                </div>
-                <div class="product-specification">
-                    <div class="product-specification__label">Specification</div>
-                    <div class="specification-tab">
-                        <div class="specification-tab__item">Body and chassis</div>
-                        <div class="specification-tab__item">Powertrain</div>
-                        <div class="specification-tab__item specification-tab__item--last">Dimensions</div>
+                        <div class="product-keyfeature">
+                            <div class="product-keyfeature__label">Key Features</div>
+                            <div class="product-keypoints">
+                                <div class="product-keypoints__item product-keypoints__item--before">High on fuel efficiency and performance</div>
+                                <div class="product-keypoints__item product-keypoints__item--before">Reaches 100 km/hr in 10.4 seconds</div>
+                                <div class="product-keypoints__item product-keypoints__item--before">Four cylinder layout, it comes mated to a 5 speed manual gearbox</div>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="product-variant">
-                        <div class="product-variant__item">
-                            <div class="product-variant__item--first">Class</div>
-                            <div class="product-variant__item--last">Subcompact (B)</div>
+                    <div class="product-specification">
+                        <div class="product-specification__label">Specification</div>
+                        <div class="specification-tab">
+                            <div class="specification-tab__item" id="default-open__specification" onclick="openTab(event, 'variant', 'product-variant', 'specification-tab__item')">Body and chassis</div>
+                            <div class="specification-tab__item" onclick="openTab(event, 'outlook', 'product-variant', 'specification-tab__item')">Powertrain</div>
+                            <div class="specification-tab__item specification-tab__item--last">Dimensions</div>
                         </div>
-                        <div class="product-variant__item">
-                            <div class="product-variant__item--first">Body style</div>
-                            <div class="product-variant__item--last">5-door hatchback</div>
+                        <!-- first wrapper -->
+                        <div id="variant" class="product-variant" >
+                            <div class="product-variant__item">
+                                <div class="product-variant__item--first">Class</div>
+                                <div class="product-variant__item--last">Subcompact (B)</div>
+                            </div>
+                            <div class="product-variant__item">
+                                <div class="product-variant__item--first">Body style</div>
+                                <div class="product-variant__item--last">5-door hatchback</div>
+                            </div>
+                            <div class="product-variant__item">
+                                <div class="product-variant__item--first">Layout</div>
+                                <div class="product-variant__item--last">Front-engine, front-wheel-drive</div>
+                            </div>
                         </div>
-                        <div class="product-variant__item">
-                            <div class="product-variant__item--first">Layout</div>
-                            <div class="product-variant__item--last">Front-engine, front-wheel-drive</div>
+                        <!-- second wrapper -->
+                        <div id="outlook" class="product-variant" >
+                            lkl
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div id="gloster" class="cnb-tab-wrapper box-container">
+                content...
             </div>
         </section>
     </div>
@@ -182,4 +193,21 @@
     </div>
 </footer>
 </body>
+<script>
+    function openTab(evt, bindContentId, bindContentClass, bindtabClass) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName(bindContentClass);
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName(bindtabClass);
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" cnb-d__block", "");
+        }
+        document.getElementById(bindContentId).style.display = "block";
+        evt.currentTarget.className += " cnb-d__block";
+    }
+    document.getElementById("default-open").click();
+    document.getElementById("default-open__specification").click();
+</script>
 </html>

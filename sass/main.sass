@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import "./base.sass"
 @import "./header.sass"
-
 @import "./footer.sass"
 
 
@@ -24,8 +24,10 @@
 
 .product-launch
     &__heading
-        font: normal normal bold 22px/29px Roboto
+        font-family: 'Roboto'
         color: #001E4A
+        font-size: 22px
+        line-height: 29px
 
 .product-tab
     margin-top: 26px
@@ -40,6 +42,7 @@
         text-decoration: none
         font-size: 14px
         line-height: 19px
+        font-weight: 500
 
 .feature-wrapper
     border: 1px solid #0000001A
@@ -47,7 +50,7 @@
 
 .feature-display
     display: grid
-    grid-template-columns: 1.3fr 1.7fr 1.15fr
+    grid-template-columns: 1.3fr 1.7fr 1.3fr
     grid-column-gap: 30px
     &__view
         margin-top: 30px
@@ -65,6 +68,7 @@
         margin-bottom: 14px
         font-size: 20px
         line-height: 26px
+        font-weight: 500
     &__text
         color: #5C6065
         margin-bottom: 24px
@@ -78,6 +82,7 @@
         margin-bottom: 17px
         font-size: 16px
         line-height: 21px
+        font-weight: 500
 
 .product-keypoints
     &__item
@@ -106,6 +111,7 @@
         color: #001E4A
         font-size: 16px
         line-height: 21px
+        font-weight: 500
 
 .specification-tab
     margin-top: 20px
@@ -116,6 +122,8 @@
         margin-right: 30px
         font-size: 12px
         line-height: 16px
+        font-weight: 500
+        cursor: pointer
         &--last
             margin-right: 0
     
@@ -139,12 +147,13 @@
         font-size: 22px
         line-height: 19px
         margin-bottom: 15px
+        font-weight: bold
 
 .vidoe-clips-grid
     display: grid
     grid-column-gap: 74px
     grid-template-columns: 1fr 1fr
-    grid-template-row: 1fr 1fr
+    grid-template-rows: 1fr 1fr
 
 .video-wrapper
         margin-bottom: 43px
@@ -164,3 +173,6 @@
             line-height: 21px
 
 
+.box-container
+    padding: 30px;
+    min-height: 393px;
