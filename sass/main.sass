@@ -124,8 +124,23 @@
         line-height: 16px
         font-weight: 500
         cursor: pointer
+        position: relative
         &--last
             margin-right: 0
+        &--active
+            color: #00060E
+            &:before
+                content: ""
+                position: absolute
+                bottom: -7px
+                width: 21px
+                height: 2px
+                background: #E64646
+                transition: all 1.5s cubic-bezier(0.18, 0.89, 0.32, 1.28)
+            &:hover
+                &:before
+                    width: 100%
+
     
 .product-variant
     &__item
@@ -161,6 +176,20 @@
             margin-bottom: 21px
             img
                 width: 100%
+                object-fit: cover
+                height: 100%
+                transition: all 1.5s cubic-bezier(0, 0, 0.2, 1)
+            &--animation
+                overflow: hidden
+                max-width: 100%
+                background: #000000d6
+                height: 350px
+                &:hover
+                    img
+                        max-width: 100%
+                        transform: scale3d(1.2, 1.2, 1.2)
+                        opacity: .4
+                       
         &__title
             color: #001E4A
             font-size: 16px
