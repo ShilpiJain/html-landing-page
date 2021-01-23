@@ -62,22 +62,29 @@
             <div class="product-launch">                
                 <h1 class="product-launch__heading">MG Motor Upcoming launches</h1>
                 <div class="product-tab">
-                    <div class="product-tab__item" id="default-open" onclick="openTab(event, 'mgModal', 'cnb-tab-wrapper', 'product-tab__item', 'cnb-d__block')">
-                        <a href="#" class="product-tab--link"   alt="MG 3" title="MG 3">MG 3</a>
+                    <div class="product-tab__item product-tab__item--active" 
+                    id="default-open" 
+                    onclick="openTab(event, 'mgModal', 'cnb-tab-wrapper', 'product-tab__item', 'product-tab__item--active')">
+                        <a href="#" class="product-tab--link" alt="MG 3" title="MG 3">MG 3</a>
                     </div>
-                    <div class="product-tab__item" onclick="openTab(event, 'gloster', 'cnb-tab-wrapper', 'product-tab__item', 'cnb-d__block')">
+                    <div class="product-tab__item" 
+                    onclick="openTab(event, 'gloster', 'cnb-tab-wrapper', 'product-tab__item', 'product-tab__item--active')">
                         <a href="#" class="product-tab--link" alt="Gloster" title="Gloster">Gloster</a>
                     </div>
-                    <div class="product-tab__item">
+                    <div class="product-tab__item" 
+                    onclick="openTab(event, 'mg', 'cnb-tab-wrapper', 'product-tab__item', 'product-tab__item--active')">
                         <a href="#" class="product-tab--link" alt="MG 6" title="MG 6">MG 6</a>
                     </div>
-                    <div class="product-tab__item">
+                    <div class="product-tab__item"
+                    onclick="openTab(event, 'marvelx', 'cnb-tab-wrapper', 'product-tab__item', 'product-tab__item--active')">
                         <a href="#" class="product-tab--link" alt="Marvel X" title="Marvel X">Marvel X</a>
                     </div>
-                    <div class="product-tab__item">
+                    <div class="product-tab__item"
+                    onclick="openTab(event, 'maxusg', 'cnb-tab-wrapper', 'product-tab__item', 'product-tab__item--active')">
                         <a href="#" class="product-tab--link" alt="Maxus G10" title="Maxus G10">Maxus G10</a>
                     </div>
-                    <div class="product-tab__item">
+                    <div class="product-tab__item"
+                    onclick="openTab(event, 'hectorseater', 'cnb-tab-wrapper', 'product-tab__item', 'product-tab__item--active')">
                         <a href="#" class="product-tab--link" alt="Hector 7 Seater" title="Hector 7 Seater">Hector 7 Seater</a>
                     </div>
                 </div>
@@ -110,8 +117,9 @@
                             id="default-open__specification"
                             onclick="openTab(event, 'variant', 'product-variant', 'specification-tab__item', 'specification-tab__item--active')">Body and chassis</div>
                             <div class="specification-tab__item"
-                            onclick="openTab(event, 'outlook', 'product-variant', 'specification-tab__item', 'specification-tab__item--active')">Powertrain</div>
-                            <div class="specification-tab__item specification-tab__item--last">Dimensions</div>
+                            onclick="openTab(event, 'powertrain', 'product-variant', 'specification-tab__item', 'specification-tab__item--active')">Powertrain</div>
+                            <div class="specification-tab__item specification-tab__item--last"
+                            onclick="openTab(event, 'dimensions', 'product-variant', 'specification-tab__item', 'specification-tab__item--active')">Dimensions</div>
                         </div>
                         <!-- first wrapper -->
                         <div id="variant" class="product-variant" >
@@ -128,16 +136,36 @@
                                 <div class="product-variant__item--last">Front-engine, front-wheel-drive</div>
                             </div>
                         </div>
-                        <!-- second wrapper -->
-                        <div id="outlook" class="product-variant" >
-                            Content...
+                        <!-- powertrain wrapper -->
+                        <div id="powertrain" class="product-variant" >
+                            powertrain Content...
+                        </div>
+                         <!-- dimensions wrapper -->
+                         <div id="dimensions" class="product-variant" >
+                            dimensions Content...
                         </div>
                     </div>
                 </div>
             </div>
-            
+            <!-- gloster section -->
             <div id="gloster" class="cnb-tab-wrapper box-container">
-                content...
+                gloster content...
+            </div>
+            <!-- mg -->
+            <div id="mg" class="cnb-tab-wrapper box-container">
+                mg content...
+            </div>
+            <!-- marvelx -->
+            <div id="marvelx" class="cnb-tab-wrapper box-container">
+                marvelx content...
+            </div>
+            <!-- maxusg -->
+            <div id="maxusg" class="cnb-tab-wrapper box-container">
+                maxusg content...
+            </div>
+            <!-- hectorseater -->
+            <div id="hectorseater" class="cnb-tab-wrapper box-container">
+                hectorseater content...
             </div>
         </section>
     </div>
@@ -198,6 +226,7 @@
 </body>
 <script>
     function openTab(evt, bindContentId, bindContentClass, bindtabClass, activeClass) {
+        evt.preventDefault();
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName(bindContentClass);
         for (i = 0; i < tabcontent.length; i++) {

@@ -138,6 +138,12 @@ body {
     border-radius: 4px;
     padding: 7px 14px;
     margin-right: 10px; }
+    .product-tab__item--active {
+      border: 1px solid #0061E6E6;
+      background: #0061E61A;
+      display: block; }
+      .product-tab__item--active a {
+        color: #0061E6; }
   .product-tab--link {
     color: #5C6065;
     text-decoration: none;
